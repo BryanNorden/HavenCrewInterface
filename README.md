@@ -3,6 +3,8 @@
 ## Overview
 HavenCrewInterface is a SwiftUI-based iPad app designed to power crew interfaces for Vast’s Haven-1 space station. It displays crew vitals and Starlink connection status. It's integrated with a C++ library for sensor data.
 
+![Haven Crew Interface](HavenCrewInterface.png)
+
 ## Features
 - **Crew Vitals**: Displays heart rate, oxygen levels, and temperature with updates from C++ sensor framework.
 -- Includes warnings based on low or high sensor data
