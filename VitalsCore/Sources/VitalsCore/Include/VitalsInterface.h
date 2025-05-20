@@ -13,9 +13,6 @@ typedef struct {
 
 VitalSignsC getNextVitalSigns(void);
 
-char* checkVitalSigns(VitalSignsC vitals);
-void freeVitalSignsResult(char* result);
-
 #ifdef __cplusplus
 }
 #endif

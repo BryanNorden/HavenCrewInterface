@@ -6,35 +6,30 @@ public struct VitalSigns {
     public let temperature: Float
     public let suitPressure: Float
     
-    init(cVitalSigns: VitalsCore.VitalSignsC) {
+    public init(cVitalSigns: VitalsCore.VitalSignsC) {
         self.heartRate = cVitalSigns.heartRate
         self.oxygenLevel = cVitalSigns.oxygenLevel
         self.temperature = cVitalSigns.temperature
         self.suitPressure = cVitalSigns.suitPressure
     }
+    
+    public init(heartRate: Float, oxygenLevel: Float, temperature: Float, suitPressure: Float) {
+        self.heartRate = heartRate
+        self.oxygenLevel = oxygenLevel
+        self.temperature = temperature
+        self.suitPressure = suitPressure
+    }
 }
 
-public class VitalsCoreWrapper {
+public protocol VitalsService {
+    func getNextVitalSigns() -> VitalSigns
+}
+
+public class VitalsCoreWrapper: VitalsService {
     public init() {}
     
     public func getNextVitalSigns() -> VitalSigns {
         let cVitalSigns = VitalsCore.getNextVitalSigns()
         return VitalSigns(cVitalSigns: cVitalSigns)
-    }
-    
-    public func checkVitalSigns(_ vitals: VitalSigns) -> String {
-        let cVitals = VitalSignsC(
-            heartRate: vitals.heartRate,
-            oxygenLevel: vitals.oxygenLevel,
-            temperature: vitals.temperature,
-            suitPressure: vitals.suitPressure
-        )
-        
-        guard let cResult = VitalsCore.checkVitalSigns(cVitals) else {
-            return ""
-        }
-        
-        defer { VitalsCore.freeVitalSignsResult(cResult) }
-        return String(cString: cResult)
     }
 }
