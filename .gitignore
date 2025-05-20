@@ -1,0 +1,90 @@
+# Xcode
+# Build products and temporary files
+build/
+DerivedData/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+
+# Xcode temporary files
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.playground/
+*.moved-aside/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+# Build directories and resolved files
+.build/
+Packages/
+*.resolved
+.swiftpm/
+
+# C++ build artifacts
+# Object files, libraries, and executables
+*.o
+*.a
+*.so
+*.dylib
+*.out
+*.obj
+*.lib
+*.exe
+*.pdb
+*.ilk
+
+# macOS
+# Finder metadata and temporary files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# Logs and caches
+*.log
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency management
+# Ignore dependency directories if using Carthage or CocoaPods
+Carthage/
+Pods/
+Podfile.lock
+
+# Sensitive files
+# Environment variables, secrets, or API keys
+.env
+*.secret
+*.key
+*.pem
+*.cer
+*.p12
+*.mobileprovision
+
+# IDE and editor files
+# VS Code, IntelliJ, etc.
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Package-specific build artifacts
+VitalsCorePackage/.build/
+VitalsCorePackage/Packages/
+VitalsCorePackage/*.resolved
