@@ -1,0 +1,4 @@
+module VitalsCore {
+    header "VitalsInterface.h"
+    export *
+}

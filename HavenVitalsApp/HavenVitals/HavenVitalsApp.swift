@@ -11,7 +11,7 @@ import SwiftUI
 struct HavenVitalsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VitalDashboardView()
         }
     }
 }

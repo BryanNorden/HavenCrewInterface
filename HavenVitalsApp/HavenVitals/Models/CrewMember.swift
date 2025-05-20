@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct CrewMember: Identifiable {
+    let id: UUID
+    let name: String
+    var vitals: VitalSigns
+    var status: String
+}

@@ -4,5 +4,5 @@
 
 class HealthChecker {
 public:
-    std::string checkVitals(const VitalSigns &vitals);
+    std::string checkVitals(const VitalSigns& vitals);
 };

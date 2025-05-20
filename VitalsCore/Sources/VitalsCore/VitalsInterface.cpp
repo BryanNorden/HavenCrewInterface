@@ -1,18 +1,36 @@
 #include "VitalsInterface.h"
+#include "HealthChecker.hpp"
 #include "VitalSimulator.hpp"
-#include "HealtChecker.hpp"
+
+#include <string>
 
 static VitalSimulator simulator;
 static HealthChecker checker;
 
-VitalSignsC getNextVitalSigns() {
-    VitalSigns vs = simulator.generateNextVitals();
-    return { vs.heartRate, vs.oxygenLevel, vs.temperature, vs.pressure };
+VitalSignsC getNextVitalSigns(void) {
+    // Currenlty using simulated vitals.
+    // This is where you would grab data from hardware sensors
+    VitalSigns vitals = simulator.generateNextVitals();
+    return {
+        vitals.heartRate,
+        vitals.oxygenLevel,
+        vitals.temperature,
+        vitals.suitPressure
+    };
 }
 
-const char* checkVitalSigns(VitalSignsC vs) {
-    VitalSigns cppVs = { vs.heartRate, vs.oxygenLevel, vs.temperature, vs.pressure };
-    static std::string result;
-    result = checker.checkVitals(cppVs);
-    return result.c_str();
+char* checkVitalSigns(VitalSignsC input) {
+    VitalSigns vitals = {
+        input.heartRate,
+        input.oxygenLevel,
+        input.temperature,
+        input.suitPressure
+    };
+    std::string result = checker.checkVitals(vitals);
+    char* cResult = strdup(result.c_str());
+    return cResult;
+}
+
+void freeVitalSignsResult(char* result) {
+    free(result);
 }

@@ -6,15 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F3C004A52DD5458F006A7011 /* VitalsCorePackage in Frameworks */ = {isa = PBXBuildFile; productRef = F3C004A42DD5458F006A7011 /* VitalsCorePackage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F3D4B2212DD4688800276C8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3D4B20B2DD4688600276C8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3D4B2122DD4688600276C8C;
-			remoteInfo = HavenVitals;
-		};
-		F3D4B22B2DD4688800276C8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3D4B20B2DD4688600276C8C /* Project object */;
 			proxyType = 1;
@@ -26,8 +23,6 @@
 /* Begin PBXFileReference section */
 		F3D4B2132DD4688600276C8C /* HavenVitals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HavenVitals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D4B2202DD4688800276C8C /* HavenVitalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HavenVitalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D4B22A2DD4688800276C8C /* HavenVitalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HavenVitalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D4B2892DD471E900276C8C /* libVitalsCore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libVitalsCore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -41,11 +36,6 @@
 			path = HavenVitalsTests;
 			sourceTree = "<group>";
 		};
-		F3D4B22D2DD4688800276C8C /* HavenVitalsUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HavenVitalsUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C004A52DD5458F006A7011 /* VitalsCorePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,29 +54,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3D4B2272DD4688800276C8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3D4B2872DD471E900276C8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3C004662DD48CB9006A7011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3D4B20A2DD4688600276C8C = {
 			isa = PBXGroup;
 			children = (
 				F3D4B2152DD4688600276C8C /* HavenVitals */,
 				F3D4B2232DD4688800276C8C /* HavenVitalsTests */,
-				F3D4B22D2DD4688800276C8C /* HavenVitalsUITests */,
+				F3C004662DD48CB9006A7011 /* Frameworks */,
 				F3D4B2142DD4688600276C8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,23 +79,11 @@
 			children = (
 				F3D4B2132DD4688600276C8C /* HavenVitals.app */,
 				F3D4B2202DD4688800276C8C /* HavenVitalsTests.xctest */,
-				F3D4B22A2DD4688800276C8C /* HavenVitalsUITests.xctest */,
-				F3D4B2892DD471E900276C8C /* libVitalsCore.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		F3D4B2852DD471E900276C8C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F3D4B2122DD4688600276C8C /* HavenVitals */ = {
@@ -131,6 +103,7 @@
 			);
 			name = HavenVitals;
 			packageProductDependencies = (
+				F3C004A42DD5458F006A7011 /* VitalsCorePackage */,
 			);
 			productName = HavenVitals;
 			productReference = F3D4B2132DD4688600276C8C /* HavenVitals.app */;
@@ -159,48 +132,6 @@
 			productReference = F3D4B2202DD4688800276C8C /* HavenVitalsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F3D4B2292DD4688800276C8C /* HavenVitalsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3D4B23A2DD4688800276C8C /* Build configuration list for PBXNativeTarget "HavenVitalsUITests" */;
-			buildPhases = (
-				F3D4B2262DD4688800276C8C /* Sources */,
-				F3D4B2272DD4688800276C8C /* Frameworks */,
-				F3D4B2282DD4688800276C8C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3D4B22C2DD4688800276C8C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F3D4B22D2DD4688800276C8C /* HavenVitalsUITests */,
-			);
-			name = HavenVitalsUITests;
-			packageProductDependencies = (
-			);
-			productName = HavenVitalsUITests;
-			productReference = F3D4B22A2DD4688800276C8C /* HavenVitalsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		F3D4B2882DD471E900276C8C /* VitalsCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3D4B2932DD471E900276C8C /* Build configuration list for PBXNativeTarget "VitalsCore" */;
-			buildPhases = (
-				F3D4B2852DD471E900276C8C /* Headers */,
-				F3D4B2862DD471E900276C8C /* Sources */,
-				F3D4B2872DD471E900276C8C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VitalsCore;
-			packageProductDependencies = (
-			);
-			productName = VitalsCore;
-			productReference = F3D4B2892DD471E900276C8C /* libVitalsCore.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,16 +149,9 @@
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = F3D4B2122DD4688600276C8C;
 					};
-					F3D4B2292DD4688800276C8C = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = F3D4B2122DD4688600276C8C;
-					};
-					F3D4B2882DD471E900276C8C = {
-						CreatedOnToolsVersion = 16.3;
-					};
 				};
 			};
-			buildConfigurationList = F3D4B20E2DD4688600276C8C /* Build configuration list for PBXProject "HavenVitals" */;
+			buildConfigurationList = F3D4B20E2DD4688600276C8C /* Build configuration list for PBXProject "HavenVitalsApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -236,6 +160,9 @@
 			);
 			mainGroup = F3D4B20A2DD4688600276C8C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F3C004A32DD5458F006A7011 /* XCLocalSwiftPackageReference "../VitalsCore" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F3D4B2142DD4688600276C8C /* Products */;
 			projectDirPath = "";
@@ -243,8 +170,6 @@
 			targets = (
 				F3D4B2122DD4688600276C8C /* HavenVitals */,
 				F3D4B21F2DD4688800276C8C /* HavenVitalsTests */,
-				F3D4B2292DD4688800276C8C /* HavenVitalsUITests */,
-				F3D4B2882DD471E900276C8C /* VitalsCore */,
 			);
 		};
 /* End PBXProject section */
@@ -258,13 +183,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3D4B21E2DD4688800276C8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3D4B2282DD4688800276C8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,20 +206,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3D4B2262DD4688800276C8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3D4B2862DD471E900276C8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -309,11 +213,6 @@
 			isa = PBXTargetDependency;
 			target = F3D4B2122DD4688600276C8C /* HavenVitals */;
 			targetProxy = F3D4B2212DD4688800276C8C /* PBXContainerItemProxy */;
-		};
-		F3D4B22C2DD4688800276C8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3D4B2122DD4688600276C8C /* HavenVitals */;
-			targetProxy = F3D4B22B2DD4688800276C8C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,82 +432,10 @@
 			};
 			name = Release;
 		};
-		F3D4B23B2DD4688800276C8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = engineer.bryan.HavenVitalsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HavenVitals;
-			};
-			name = Debug;
-		};
-		F3D4B23C2DD4688800276C8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = engineer.bryan.HavenVitalsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HavenVitals;
-			};
-			name = Release;
-		};
-		F3D4B2912DD471E900276C8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Debug;
-		};
-		F3D4B2922DD471E900276C8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3D4B20E2DD4688600276C8C /* Build configuration list for PBXProject "HavenVitals" */ = {
+		F3D4B20E2DD4688600276C8C /* Build configuration list for PBXProject "HavenVitalsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3D4B2322DD4688800276C8C /* Debug */,
@@ -635,25 +462,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3D4B23A2DD4688800276C8C /* Build configuration list for PBXNativeTarget "HavenVitalsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3D4B23B2DD4688800276C8C /* Debug */,
-				F3D4B23C2DD4688800276C8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3D4B2932DD471E900276C8C /* Build configuration list for PBXNativeTarget "VitalsCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3D4B2912DD471E900276C8C /* Debug */,
-				F3D4B2922DD471E900276C8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F3C004A32DD5458F006A7011 /* XCLocalSwiftPackageReference "../VitalsCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../VitalsCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3C004A42DD5458F006A7011 /* VitalsCorePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VitalsCorePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3D4B20B2DD4688600276C8C /* Project object */;
 }
